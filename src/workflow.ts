@@ -252,7 +252,7 @@ Return JSON using schema:
       message = bugs
         .map((b) => {
           const name = b.repo.split('/')[1];
-          return `- ${name}: ${b.description} ([file](<https://github.com/${b.repo}/blob/${b.new}/${b.path}>), [changes](<https://github.com/${b.repo}/compare/${b.old}...${b.new}>))`;
+          return `- ${name}: ${b.description} ([file](<https://github.com/${b.repo}/blob/${b.new}/${b.path.replaceAll(' ', '%20')}>), [changes](<https://github.com/${b.repo}/compare/${b.old}...${b.new}>))`;
         })
         .join('\n');
       if (payload.type == 'manual-wet') {
