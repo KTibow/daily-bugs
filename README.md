@@ -1,5 +1,3 @@
-# Daily Bugs
-
 Daily Bugs is the personal AI linter: every day, it gives you a list of bugs it thinks you committed.
 
 ## No PRs needed
