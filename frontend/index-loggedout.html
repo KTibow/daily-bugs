@@ -3,27 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/icon.svg" />
-    <link rel="stylesheet" href="/base.css" />
+    <link rel="icon" href="./icon.svg" />
+    <link rel="stylesheet" href="./base.css" />
     <title>Daily Bugs</title>
     <style>
+      body {
+        justify-content: center;
+        align-items: center;
+      }
+      .readme {
+        width: 100%;
+        max-width: 45rem;
+        line-height: 1.5;
+        color: var(--m3c-on-surface);
+
+        display: flex;
+        flex-direction: column;
+      }
+      .readme > :not(:first-child) {
+        margin-top: 1em;
+      }
+      .readme > br:not(:first-child) {
+        margin-top: 4rem;
+      }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        font-weight: 700;
+        line-height: 1.1;
+        text-align: center;
+        color: var(--m3c-on-surface);
+      }
+      h1 span {
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+        height: 3rem;
+        padding-inline: 1rem;
+        gap: 0.5rem;
+        border-radius: var(--m3-shape-full);
+        font-size: 1.25rem;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+      h1 svg {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+      .daily-bugs {
+        background: var(--m3c-primary-container);
+        color: var(--m3c-on-primary-container);
+        transform: rotate(2deg);
+      }
+      .detail {
+        background: var(--m3c-surface-container-highest);
+        color: var(--m3c-on-surface);
+        transform: rotate(-2deg);
+      }
+      .greptile {
+        background: light-dark(#e6f4ea, #0d3d28);
+        color: light-dark(#107a4d, #a3e8c3);
+        transform: rotate(1.5deg);
+      }
+      .coderabbit {
+        background: light-dark(#ffede6, #4a1c06);
+        color: light-dark(#ff570a, #ffbba3);
+      }
       .button {
+        font-weight: 500;
         align-self: center;
-        margin-block: auto;
+      }
+      h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--m3c-on-surface);
+      }
+      p {
+        color: var(--m3c-on-surface-variant);
+      }
+      a:not(.button):hover {
+        text-decoration: underline;
+      }
+      .links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
       }
     </style>
   </head>
   <body>
-    <a
-      class="button"
-      href="https://github.com/login/oauth/authorize?client_id=Ov23liZ42ZbwqopYT7Y6&scope=user:email"
-      >Enable Daily Bugs</a
-    >
-    <footer>
-      You can also <a href="https://github.com/KTibow/dailybugs">learn more about Daily Bugs</a> or
-      <a href="https://github.com/settings/connections/applications/Ov23liZ42ZbwqopYT7Y6"
-        >disable Daily Bugs</a
-      >.
-    </footer>
+    <section class="readme">
+      <!-- README.md -->
+      <br />
+      <div class="links">
+        <a href="https://github.com/KTibow/dailybugs" class="center">GitHub</a>
+        <a href="https://github.com/settings/connections/applications/Ov23liZ42ZbwqopYT7Y6"
+          >Disable Daily Bugs</a
+        >
+      </div>
+    </section>
   </body>
 </html>

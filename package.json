@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "vite build",
+    "predeploy": "vite build",
+    "predev": "vite build",
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
+    "frontend:dev": "vite build --watch",
     "cf-typegen": "wrangler types",
     "format": "prettier . --write"
   },
@@ -16,6 +20,7 @@
     "marked": "^17.0.1",
     "prettier": "^3.8.1",
     "typescript": "^5.5.2",
+    "vite": "^8.0.0",
     "wrangler": "^4.61.1"
   }
 }
